@@ -33,7 +33,19 @@ repositories {
 dependencies {
     //오류 있어서 compile -> implementation(버전 문제)
     implementation('org.springframework.boot:spring-boot-starter-web')
+    //chap2에서 추가.
+    implementation('org.projectlombok:lombok')
     //오류 있어서 testCompile -> testImplementation(버전 문제)
+
+    implementation('org.springframework.boot:spring-boot-starter-data-jpa')
+    //스프링 부트용 Spring Data JPA 추상화 라이브러리. 스프링 부트 버젼에 맞춰 자동으로 버전 관리.
+
+    implementation('com.h2database:h2')
+    //h2: 인메모리 관계형 데이터베이스. 별도의 설치 필요 없음. 프로젝트 의존성만으로 관리.
+    // 메모리에서 실행됨. -> 재시작할 때마다 초기화 -> 테스트 용도로 자주 이용.
+
     testImplementation('org.springframework.boot:spring-boot-starter-test')
 }
+
+
 
